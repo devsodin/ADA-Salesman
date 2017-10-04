@@ -1,7 +1,15 @@
-﻿  Dijkstra.cpp
+﻿  stdafx.cpp
+  Backtracking.cpp
+  BranchAndBound.cpp
+  CGraph.cpp
+  CGraphCtrl.cpp
+  Dijkstra.cpp
+  GraphDimensionsDlg.cpp
+  Greedy.cpp
+  Salesman.cpp
+  SalesmanDlg.cpp
+  VisitsDimensionDlg.cpp
   Generating code
-  88 of 673 functions (13.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    114 functions had inline decision re-evaluated but remain unchanged
+  All 745 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Salesman.vcxproj -> C:\Users\DevsOdin\source\repos\ADA-Salesman\x64\Release\Salesman.exe
