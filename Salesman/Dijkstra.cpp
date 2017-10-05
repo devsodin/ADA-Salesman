@@ -44,34 +44,36 @@ void CGraph::Dijkstra(CVertex *pStart)
 
 void CGraph::DijkstraQueue(CVertex *pStart)
 {
+
+	auto comparepq = [](CVertex z, CVertex x) { return z.m_DijkstraDistance > x.m_DijkstraDistance; };
+	priority_queue <CVertex, vector<CVertex>, decltype(comparepq)> pq(comparepq);
+
 	// Set all vertex to infinite distance(unknown) and not visited
 	for (CVertex &v : m_Vertices) {
 		v.m_DijkstraDistance = numeric_limits<double>::max();
 		v.m_DijkstraVisit = false;
+
 	}
 
+	pStart->m_DijkstraDistance = 0;
 
-	CVertex* s = pStart;
-	s->m_DijkstraVisit = true;
-	s->m_DijkstraDistance = 0;
-
-	auto comparepq = [](CVertex* z, CVertex* x) { return z->m_DijkstraDistance < x->m_DijkstraDistance; };
-	priority_queue <CVertex*, vector<CVertex*>, decltype(comparepq)> pq(comparepq);
-
-	pq.push(s);
+	for (CVertex &v : m_Vertices) {
+		pq.push(v);
+	}
 
 	while (!pq.empty()) {
-		CVertex* selected = pq.top();
+		CVertex selected = pq.top();
 		pq.pop();
-		for (CVertex* u : selected->m_Neighbords) {
-			double dist = selected->m_DijkstraDistance + (u->m_Point - selected->m_Point).Module();
-			if (dist < u->m_DijkstraDistance) {
-				u->m_DijkstraDistance = dist;
-			}
-			if (!u->m_DijkstraVisit) {
-				u->m_DijkstraVisit = true;
-				pq.push(u);
+
+		for (CVertex* x : selected.m_Neighbords) {
+			if (!x->m_DijkstraVisit) {
+				double dist = selected.m_DijkstraDistance + (x->m_Point - selected.m_Point).Module();
+				if (dist < x->m_DijkstraDistance) {
+					x->m_DijkstraDistance = dist;
+					pq.push(*x);
+				}
 			}
 		}
+
 	}
 }

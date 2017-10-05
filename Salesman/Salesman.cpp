@@ -33,14 +33,15 @@ CSalesmanApp::CSalesmanApp()
 // IDENTIFICACION DE LOS ALUMNOS ===============================================
 // =============================================================================
 
+
 CString NombreAlumno1 = "Yael";
 CString ApellidosAlumno1 = "Tudela	Barroso";
 CString NIAAlumno1 = "1430896"; // NIA alumno1
 
 // No rellenar en caso de grupo de un alumno
-CString NombreAlumno2 = "nombre del alumno 2";
-CString ApellidosAlumno2 = "apellidos del alumno 2";
-CString NIAAlumno2 = ""; // NIA alumno2
+CString NombreAlumno2 = "Antoni Joan";
+CString ApellidosAlumno2 = "Passarell Dedeu";
+CString NIAAlumno2 = "1426771"; // NIA alumno2
 
 char* NIAS[] = {
 	"1335167","1428136","1397750","1390855","1424739","1424670","1423739",
