@@ -117,7 +117,7 @@ HCURSOR CSalesmanDlg::OnQueryDragIcon()
 void CSalesmanDlg::OnBnClickedButtonLeerGrafo()
 {
 	CFileDialog dlg(true, NULL, NULL, OFN_FILEMUSTEXIST,
-		"Fichero de grafo (*.txt)|*.txt|"
+		"Fichero de grafo (*.txt)|gr*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -159,7 +159,7 @@ void CSalesmanDlg::OnBnClickedButtonCrearGrafoAleatorio()
 void CSalesmanDlg::OnBnClickedButtonGuardarGrafo()
 {
 	CFileDialog dlg(false, ".txt", NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,
-		"Fichero de grafo (*.txt)|*.txt|"
+		"Fichero de grafo (*.txt)|gr*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -183,7 +183,7 @@ void CSalesmanDlg::OnBnClickedButtonLeerDistancias()
 	}
 
 	CFileDialog dlg(true, NULL, NULL, OFN_FILEMUSTEXIST,
-		"Fichero de distancias (*.txt)|*.txt|"
+		"Fichero de distancias (*.txt)|dis*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -222,7 +222,7 @@ void CSalesmanDlg::OnBnClickedButtonGuardarDistancias()
 	}
 
 	CFileDialog dlg(false, ".txt", NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,
-		"Fichero de distancias(*.txt)|*.txt|"
+		"Fichero de distancias(*.txt)|dis*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -242,7 +242,7 @@ void CSalesmanDlg::OnBnClickedButtonGuardarDistancias()
 void CSalesmanDlg::OnBnClickedButtonLeerVisitas()
 {
 	CFileDialog dlg(true, NULL, NULL, OFN_FILEMUSTEXIST,
-		"Fichero de visitas (*.txt)|*.txt|"
+		"Fichero de visitas (*.txt)|vi*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -281,7 +281,7 @@ void CSalesmanDlg::OnBnClickedButtonCrearVisitasAleatorias()
 void CSalesmanDlg::OnBnClickedButtonGuardarVisitas()
 {
 	CFileDialog dlg(false, ".txt", NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,
-		"Fichero de visitas (*.txt)|*.txt|"
+		"Fichero de visitas (*.txt)|v*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -301,7 +301,7 @@ void CSalesmanDlg::OnBnClickedButtonGuardarVisitas()
 void CSalesmanDlg::OnBnClickedButtonLeerTrack()
 {
 	CFileDialog dlg(true, NULL, NULL, OFN_FILEMUSTEXIST,
-		"Fichero de track (*.txt)|*.txt|"
+		"Fichero de track (*.txt)|t*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 
@@ -323,7 +323,7 @@ void CSalesmanDlg::OnBnClickedButtonLeerTrack()
 void CSalesmanDlg::OnBnClickedButtonGuardarTrack()
 {
 	CFileDialog dlg(false, ".txt", NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,
-		"Fichero de track (*.txt)|*.txt|"
+		"Fichero de track (*.txt)|t*.txt|"
 		"All Files (*.*)|*.*||"
 	);
 

@@ -24,7 +24,7 @@ CTrack CGraph::SalesmanTrackGreedy(CVisits &visits)
 
 	CVertex* last = visits.m_Vertices.back();
 	visits.m_Vertices.pop_back();
-	
+
 	CGraph::Dijkstra(selected);
 	//Por cada nodo a visitrar
 	while (!visits.m_Vertices.empty()) {
@@ -46,4 +46,3 @@ CTrack CGraph::SalesmanTrackGreedy(CVisits &visits)
 	return track;
 
 }
-
