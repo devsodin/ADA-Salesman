@@ -36,8 +36,13 @@ bnb2_Node::bnb2_Node(vector<int> tovisit, double h, double cost, vector<int> sol
 	__h = h;
 	__cota = cota;
 }
+struct comparator_h1 {
+	bool operator()(bnb1_Node const* n1, bnb1_Node const* n2) {
+		return (n1->__h > n2->__h);
+	}
+};
 
-struct comparator_h1_h2 {
+struct comparator_h2 {
 	bool operator()(bnb1_Node const* n1, bnb1_Node const* n2) {
 		return (n1->__h < n2->__h);
 	}
@@ -54,7 +59,7 @@ struct comparator_h3 {
 CTrack CGraph::SalesmanTrackBranchAndBound1(CVisits &visits)
 {
 	int n_vertices = visits.m_Vertices.size();
-	priority_queue<bnb1_Node*, vector<bnb1_Node*>, comparator_h1_h2> priorityQueue;
+	priority_queue<bnb1_Node*, vector<bnb1_Node*>, comparator_h1> priorityQueue;
 	double min_cost = numeric_limits<double>::max();
 	vector<int> visited, solution, toVisit;
 	visited.push_back(0);
@@ -162,7 +167,7 @@ CTrack CGraph::SalesmanTrackBranchAndBound2(CVisits &visits)
 {
 
 	double min_cost = numeric_limits<double>::max();
-	priority_queue<bnb1_Node*, vector<bnb1_Node*>, comparator_h1_h2> priorityQueue;
+	priority_queue<bnb1_Node*, vector<bnb1_Node*>, comparator_h2> priorityQueue;
 	vector<int> visited, solution, toVisit;
 	int n_vertices = visits.m_Vertices.size();
 
